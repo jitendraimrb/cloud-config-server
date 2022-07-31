@@ -14,7 +14,7 @@ microservice:
         uri: http://YOUR-CLIENT1/client1/getOrderList
         
 microservice:
-  client1-service:
+  client2-service:
     endpoints:
       endpoint:
         uri: http://YOUR-CLIENT2/client2/validateOrder
