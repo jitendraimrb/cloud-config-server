@@ -6,6 +6,19 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
+  
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: PARTS-ORDER-CLIENT-APP
+          uri: lb://PARTS-ORDER-CLIENT-APP
+          predicates:
+            - Path=/parts/order/v1/**
+        - id: PARTS-ORDER-MANAGEMENT-APP
+          uri: lb://PARTS-ORDER-MANAGEMENT-APP
+          predicates:
+            - Path=/parts/management/v1/**
      
 microservice:
   client1-service:
