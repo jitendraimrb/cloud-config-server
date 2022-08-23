@@ -11,10 +11,10 @@ microservice:
   client1-service:
     endpoints:
       endpoint:
-        uri: http://YOUR-CLIENT1/client1/getOrderList
+        uri: http://PARTS-ORDER-CLIENT-APP/parts/order/v1/getPartsOrderList
         
 microservice:
   client2-service:
     endpoints:
       endpoint:
-        uri: http://YOUR-CLIENT2/client2/validateOrder
+        uri: http://PARTS-ORDER-MANAGEMENT-APP/parts/management/v1/validateOrder
